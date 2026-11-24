@@ -287,7 +287,7 @@
         const actualDx = me.x - iceState.lastX;
 
         if (onIce) {
-            const targetVx = inputDir * 4.8;
+            const targetVx = inputDir * 8.8;
             const blockedByEngine = inputDir !== 0 &&
                 (Math.sign(actualDx) !== inputDir || Math.abs(actualDx) < 3.5);
 
@@ -296,9 +296,9 @@
             } else {
                 if (inputDir !== 0) {
                     if (iceState.vx * inputDir < 0) {
-                        iceState.vx += inputDir * 0.11;
+                        iceState.vx += inputDir * 0.09;
                     } else {
-                        iceState.vx += (targetVx - iceState.vx) * 0.06;
+                        iceState.vx += (targetVx - iceState.vx) * 0.04;
                     }
                 } else {
                     iceState.vx *= 0.975;
