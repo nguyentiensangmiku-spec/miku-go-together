@@ -34,7 +34,7 @@ module.exports = {
         chamberLeftX: 776,
         chamberRightX: 1412,
         pillarStartBottomY: 256,                  // Vị trí đáy cột ban đầu (chừa khe rộng 94px để đi qua dễ dàng)
-        pillarDropSpeed: 4.8,                     // Tốc độ sập xuống ngay khi nhặt Chìa khóa
+        pillarDropSpeed: 6.8,                     // Tốc độ sập xuống ngay khi nhặt Chìa khóa
         pillarPositions: [
             { x: 796, w: 44 },                    // Cột 1
             { x: 906, w: 44 },                    // Cột 2
@@ -43,7 +43,7 @@ module.exports = {
         ],
         wavyStartY: 38,                           // Đường sóng xanh chờ sát trần
         wavyMaxY: 326,                            // Hạ xuống sát sàn phòng trên (không đâm xuống hầm dưới)
-        wavySpeed: 0.56                           // Tốc độ hạ dần giống nhịp video
+        wavySpeed: 0.76                           // Tốc độ hạ dần giống nhịp video
     },
 
     // Chìa khóa vàng treo ở góc phải phòng trên (server tự canh độ cao theo sĩ số phòng)
