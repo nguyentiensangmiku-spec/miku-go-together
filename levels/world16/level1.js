@@ -34,7 +34,7 @@ module.exports = {
         chamberLeftX: 776,
         chamberRightX: 1412,
         pillarStartBottomY: 256,                  // Vị trí đáy cột ban đầu (chừa khe rộng 94px để đi qua dễ dàng)
-        pillarDropSpeed: 6.8,                     // Tốc độ sập xuống ngay khi nhặt Chìa khóa
+        pillarDropSpeed: 10.8,                     // Tốc độ sập xuống ngay khi nhặt Chìa khóa
         pillarPositions: [
             { x: 796, w: 44 },                    // Cột 1
             { x: 906, w: 44 },                    // Cột 2
