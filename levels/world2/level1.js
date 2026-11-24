@@ -28,7 +28,7 @@ module.exports = {
         { x: 1500, y: 250, w: 480, h: 250 },     // Mặt bằng cao 2
 
         // Cây cầu nổi lơ lửng phía trên hố vực chìa khóa
-        { x: 2000, y: 195, w: 490, h: 32 },
+        { x: 1800, y: 195, w: 490, h: 32 },
 
         // Mặt bằng cuối đặt cửa đích & tường chặn phải
         { x: 2560, y: 250, w: 590, h: 250 },
