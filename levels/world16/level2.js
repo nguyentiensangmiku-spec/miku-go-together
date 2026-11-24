@@ -33,7 +33,7 @@ module.exports = {
                 x: 681,
                 y: 225,
                 r: 46,
-                rollSpeed: 670,
+                rollSpeed: 900,
                 startDir: -1
             },
             {
@@ -41,7 +41,7 @@ module.exports = {
                 x: 1765,
                 y: 225,
                 r: 46,
-                rollSpeed: 670,
+                rollSpeed: 900,
                 startDir: -1
             }
         ],
