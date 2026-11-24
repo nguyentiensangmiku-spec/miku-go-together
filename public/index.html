@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIKU GO TOGETHER - Web Multiplayer Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="game-title">MIKU GO TOGETHER</h1>
+        <p class="subtitle">WEB MULTIPLAYER EDITION</p>
+    </header>
+
+    <!-- MÀN HÌNH 1: MENU VÀO PHÒNG -->
+    <div id="menu-screen" class="menu-card">
+        <div class="section-label">1. Chọn chế độ phòng chơi:</div>
+        <div class="mode-selector">
+            <button type="button" class="mode-btn active" data-max="2">2 NGƯỜI</button>
+            <button type="button" class="mode-btn" data-max="4">4 NGƯỜI</button>
+            <button type="button" class="mode-btn" data-max="8">8 NGƯỜI</button>
+        </div>
+
+        <div class="section-label">2. Nhập tên & mã phòng:</div>
+        <div class="input-row">
+            <input type="text" id="player-name" placeholder="Tên nhân vật" maxlength="15">
+            <input type="text" id="room-pass" placeholder="Mã phòng (VD: PICO)" maxlength="15">
+        </div>
+
+        <p id="error-msg" class="error-text"></p>
+        <button id="btn-join" class="btn-start-main">BẮT ĐẦU / VÀO PHÒNG</button>
+    </div>
+
+    <!-- MÀN HÌNH 2: TRONG PHÒNG CHƠI -->
+    <div id="room-screen" class="room-container hidden">
+        <!-- Thanh thông tin phòng ở trên -->
+        <div class="top-bar">
+            <div class="room-info">
+                <span>Phòng: <strong id="hud-pass" class="pill">---</strong></span>
+                <span>Chế độ: <strong id="hud-mode" class="pill">2 NGƯỜI</strong></span>
+                <span>Sĩ số: <strong id="hud-count" class="pill">1/2</strong></span>
+            </div>
+            <div class="room-actions">
+                <button id="btn-show-worlds" class="btn-outline">Chọn World / Màn</button>
+                <button id="btn-restart" class="btn-outline">Chơi lại màn</button>
+            </div>
+        </div>
+
+        <!-- Khung chọn World & Màn chơi (Tạm thời trống) -->
+        <div id="world-panel" class="panel-box">
+            <div class="panel-header">
+                <h2>CHỌN WORLD & MÀN CHƠI</h2>
+                <span class="panel-hint">Bấm vào bất kỳ màn nào để cả phòng cùng vào chơi</span>
+            </div>
+            <div id="world-tabs" class="world-tabs"></div>
+            <div id="level-grid" class="level-grid"></div>
+            <div id="empty-world-msg" class="empty-msg">
+                Hiện chưa có World nào. Các chú mèo đã sẵn sàng, hãy thêm màn chơi đầu tiên!
+            </div>
+
+            <!-- Khu vực hiển thị các chú mèo đang có mặt trong phòng -->
+            <div class="cat-preview-box">
+                <div class="preview-label">Nhân vật trong phòng:</div>
+                <canvas id="previewCanvas" width="840" height="110"></canvas>
+            </div>
+        </div>
+
+        <!-- Khung chơi game chính -->
+        <div id="game-panel" class="panel-box hidden">
+            <canvas id="gameCanvas" width="900" height="500"></canvas>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="engine_extra.js"></script>
+    <script src="world10_3.js"></script>
+    <script src="world10_4.js"></script>
+    <script src="world11.js"></script>
+    <script src="world12.js"></script>
+    <script src="world13.js"></script>
+    <script src="world14.js"></script>
+    <script src="world15.js"></script>
+    <script src="world16.js"></script>
+    <script src="pico_cat.js"></script>
+    <script src="engine.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>

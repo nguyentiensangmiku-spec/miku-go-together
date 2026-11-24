@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #111111;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Tiêu đề game */
+.main-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.game-title {
+    font-size: 46px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    color: #ff8c3a;
+    text-shadow: 3px 3px 0px #111111;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #666666;
+    font-weight: 600;
+}
+
+/* Khung Menu giống hình 1 */
+.menu-card {
+    background: #fffaf5;
+    border: 3px solid #111111;
+    border-radius: 16px;
+    padding: 28px 30px;
+    width: 100%;
+    max-width: 520px;
+    box-shadow: 7px 7px 0px #ff8c3a;
+}
+
+.section-label {
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: #111111;
+}
+
+.mode-selector {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.mode-btn {
+    flex: 1;
+    padding: 13px 10px;
+    font-size: 15px;
+    font-weight: 900;
+    background: #ffffff;
+    color: #111111;
+    border: 2.5px solid #111111;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.mode-btn.active {
+    background: #ff8c3a;
+    color: #ffffff;
+    box-shadow: 3px 3px 0px #111111;
+}
+
+.input-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.input-row input {
+    flex: 1;
+    padding: 12px 14px;
+    font-size: 15px;
+    border: 2.5px solid #111111;
+    border-radius: 10px;
+    background: #ffffff;
+    outline: none;
+}
+
+.input-row input:focus {
+    border-color: #ff6b2b;
+}
+
+.error-text {
+    color: #e74c3c;
+    font-size: 13px;
+    font-weight: 700;
+    min-height: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.btn-start-main {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 900;
+    background: #ff6b2b;
+    color: #ffffff;
+    border: 2.5px solid #111111;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0px #111111;
+    cursor: pointer;
+}
+
+.btn-start-main:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #111111;
+}
+
+/* Màn hình phòng chơi giống hình 2 */
+.room-container {
+    width: 100%;
+    max-width: 920px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: #ffffff;
+    border: 2.5px solid #111111;
+    border-radius: 12px;
+    padding: 12px 18px;
+}
+
+.room-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.pill {
+    display: inline-block;
+    background: #ff8c3a;
+    color: #ffffff;
+    border: 2px solid #111111;
+    border-radius: 20px;
+    padding: 3px 12px;
+    font-size: 13px;
+    margin-left: 4px;
+}
+
+.room-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-outline {
+    background: #ffffff;
+    color: #111111;
+    border: 2px solid #111111;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-weight: 800;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.btn-outline:hover {
+    background: #fff3e6;
+}
+
+.panel-box {
+    background: #ffffff;
+    border: 2.5px solid #111111;
+    border-radius: 14px;
+    padding: 22px;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.panel-header h2 {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.panel-hint {
+    font-size: 13px;
+    color: #777777;
+}
+
+.world-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.world-tab {
+    padding: 9px 18px;
+    border: 2px solid #111111;
+    border-radius: 8px;
+    background: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.world-tab.active {
+    background: #ff8c3a;
+    color: #ffffff;
+    box-shadow: 2px 2px 0px #111111;
+}
+
+.level-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.level-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #111111;
+    border-radius: 12px;
+    padding: 16px 20px;
+    background: #fffcf9;
+}
+
+.level-num {
+    color: #ff6b2b;
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.level-name {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.btn-play-small {
+    padding: 7px 16px;
+    border: 2px solid #111111;
+    border-radius: 20px;
+    background: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.btn-play-small:hover {
+    background: #ff8c3a;
+    color: #ffffff;
+}
+
+.empty-msg {
+    text-align: center;
+    padding: 36px 20px;
+    color: #666666;
+    font-weight: 700;
+    background: #fffaf5;
+    border: 2px dashed #ff8c3a;
+    border-radius: 12px;
+}
+
+.cat-preview-box {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 2px solid #eeeeee;
+}
+
+.preview-label {
+    font-size: 13px;
+    font-weight: 800;
+    color: #555555;
+    margin-bottom: 8px;
+}
+
+#previewCanvas, #gameCanvas {
+    display: block;
+    margin: 0 auto;
+    background: #ffffff;
+}
