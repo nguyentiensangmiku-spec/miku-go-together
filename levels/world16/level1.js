@@ -43,7 +43,7 @@ module.exports = {
         ],
         wavyStartY: 38,                           // Đường sóng xanh chờ sát trần
         wavyMaxY: 326,                            // Hạ xuống sát sàn phòng trên (không đâm xuống hầm dưới)
-        wavySpeed: 0.76                           // Tốc độ hạ dần giống nhịp video
+        wavySpeed: 1.46                           // Tốc độ hạ dần giống nhịp video
     },
 
     // Chìa khóa vàng treo ở góc phải phòng trên (server tự canh độ cao theo sĩ số phòng)
